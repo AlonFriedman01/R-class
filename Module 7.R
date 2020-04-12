@@ -1,0 +1,10 @@
+eyecol<-c(1,2,1,2,2,2,3,3,1,4,2,2,2,3,1,4,3,2,1,1,1)
+table(eyecol)
+eyecol<-factor(eyecol, labels=c("blue","grey","brown","green"))
+table(eyecol)
+prop.table(table(eyecol))
+round(100*prop.table(table(eyecol)),1)
+barplot(table(eyecol)) 
+barplot(table(eyecol),col=c("blue","grey","brown","green"),main="Eye color")
+y<-dnorm(x,mean=mean(eyecol,na.rm=T),sd=sd(eyecol,na.rm=T))
+
